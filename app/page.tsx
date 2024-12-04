@@ -8,7 +8,6 @@ import Contracts from "@/components/contracts"
 import PerformanceMetrics from "@/components/performance-metrics"
 import Testimonials from "@/components/testimonials"
 import WorkshopTestimonials from "@/components/workshop-testimonials"
-import Team from "@/components/team"
 import AppPromo from "@/components/app-promo"
 import Footer from "@/components/footer"
 
@@ -26,7 +25,6 @@ export default function Home() {
         <PerformanceMetrics />
         <Testimonials />
         <WorkshopTestimonials />
-        <Team />
         <AppPromo />
       </main>
       <Footer />

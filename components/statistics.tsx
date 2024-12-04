@@ -41,9 +41,9 @@ export default function Statistics() {
             <Car className="h-16 w-16 mx-auto mb-4" />
             <h3 className="text-2xl font-bold mb-2">Veículos Geridos</h3>
             <p className="text-4xl font-bold">
-              <AnimatedCounter end={1681} duration={2000} />
+              <AnimatedCounter end={1681} duration={5000} />+
             </p>
-            <p className="text-sm mt-2">Frota pública regulamentada e certificada</p>
+            <p className="text-sm mt-2">Frota pública certificada</p>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -54,9 +54,9 @@ export default function Statistics() {
             <Wrench className="h-16 w-16 mx-auto mb-4" />
             <h3 className="text-2xl font-bold mb-2">Oficinas Credenciadas</h3>
             <p className="text-4xl font-bold">
-              <AnimatedCounter end={300} duration={2000} />+
+              <AnimatedCounter end={300} duration={5000} />+
             </p>
-            <p className="text-sm mt-2">Rede credenciada em todo o Brasil</p>
+            <p className="text-sm mt-2">Rede credenciada regulamentada em todo o Brasil</p>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -67,7 +67,7 @@ export default function Statistics() {
             <FileCheck className="h-16 w-16 mx-auto mb-4" />
             <h3 className="text-2xl font-bold mb-2">Orçamentos Aprovados</h3>
             <p className="text-4xl font-bold">
-              <AnimatedCounter end={5000} duration={2000} />+
+              <AnimatedCounter end={5000} duration={4000} />+
             </p>
             <p className="text-sm mt-2">Atualizados em tempo real</p>
           </motion.div>

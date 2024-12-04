@@ -18,7 +18,6 @@ export default function Header() {
     { id: "mission", label: "Missão", icon: Info },
     { id: "statistics", label: "Estatísticas", icon: BarChart2 },
     { id: "contracts", label: "Contratos", icon: FileText },
-    { id: "team", label: "Nossa Equipe", icon: Users },
     { id: "testimonials", label: "Depoimentos", icon: MessageCircle },
     { id: "app", label: "Aplicativo", icon: Smartphone },
   ]
@@ -58,18 +57,6 @@ export default function Header() {
             </motion.div>
           ))}
         </nav>
-        <motion.div
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          <Button
-            variant="outline"
-            className="bg-[#0d97eb] text-white hover:bg-[#057fdf] transition-all duration-300 ease-in-out shadow-md hover:shadow-lg"
-          >
-            <LogIn className="w-4 h-4 mr-2" />
-            Entrar
-          </Button>
-        </motion.div>
       </div>
     </motion.header>
   )
