@@ -1,12 +1,10 @@
 import { Metadata } from 'next';
-import Head  from "next/head";
 import Header from "@/components/header";
 import Hero from "@/components/hero";
 import Benefits from "@/components/benefits";
 import Mission from "@/components/mission";
 import Statistics from "@/components/statistics";
 import QuotationProcess from "@/components/quotation-process";
-import Contracts from "@/components/contracts";
 import PerformanceMetrics from "@/components/performance-metrics";
 import Testimonials from "@/components/testimonials";
 import WorkshopTestimonials from "@/components/workshop-testimonials";

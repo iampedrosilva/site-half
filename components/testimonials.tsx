@@ -5,19 +5,19 @@ import { motion, AnimatePresence } from "framer-motion"
 
 const testimonials = [
   {
-    name: "João Silva",
-    role: "Gestor de Frota",
-    content: "A Half Benefícios revolucionou nossa gestão de frota. Economizamos tempo e recursos significativamente.",
+    name: 'João Silva',
+    role: 'Gestor de Frota',
+    content: 'A Half Benefícios revolucionou nossa gestão de frota. Economizamos tempo e recursos significativamente.',
   },
   {
-    name: "Maria Santos",
-    role: "Controladora Interna",
-    content: "O sistema de benefícios da Half é intuitivo e eficiente. Nossos gestores adoram!",
+    name: 'Maria Santos',
+    role: 'Controladora Interna',
+    content: 'O sistema de benefícios da Half é intuitivo e eficiente. Nossos gestores adoram!',
   },
   {
-    name: "Carlos Oliveira",
-    role: "Secretário de Transportes",
-    content: "Com a Half, conseguimos otimizar nossa frota pública e reduzir custos de manutenção em 40%.",
+    name: 'Carlos Oliveira',
+    role: 'Secretário de Transportes',
+    content: 'Com a Half, conseguimos otimizar nossa frota pública e reduzir custos de manutenção em 40%.',
   },
 ]
 
