@@ -16,6 +16,7 @@ const states = {
   PR: { name: "Paraná", vehicles: 320, workshops: 38 },
   PB: { name: "Paraíba", vehicles: 130, workshops: 22 },
   BA: { name: "Bahia", vehicles: 280, workshops: 32 },
+  MT: { name: "Mato Grosso", vehicles: 0, workshops: 0 },
 }
 
 export default function Contracts() {

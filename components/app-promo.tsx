@@ -2,7 +2,8 @@
 
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
-import Image from "next/image"
+import { FaGooglePlay, FaAppStore } from "react-icons/fa"
+import Link from "next/link"
 
 export default function AppPromo() {
   return (
@@ -19,36 +20,52 @@ export default function AppPromo() {
             <p className="text-xl mb-8 text-[#057fdf]">Gerencie sua frota de forma eficiente, diretamente do seu smartphone.</p>
             <div className="flex space-x-4">
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                <Button className="bg-[#0d97eb] text-white hover:bg-[#057fdf] transition-colors rounded-full px-6">
-                  <Image src="/app-store-icon.svg" alt="App Store" width={24} height={24} className="mr-2" />
-                  App Store
-                </Button>
+                <Link href="https://play.google.com/store/apps/details?id=com.halfbeneficios.frotas" target="_blank" rel="noopener noreferrer">
+                  <Button className="bg-[#0d97eb] text-white hover:bg-[#057fdf] transition-colors rounded-full px-6">
+                    <FaGooglePlay size={24} />
+                    Google Play
+                  </Button>
+                </Link>
               </motion.div>
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                <Button className="bg-[#0d97eb] text-white hover:bg-[#057fdf] transition-colors rounded-full px-6">
-                  <Image src="/play-store-icon.svg" alt="Play Store" width={24} height={24} className="mr-2" />
-                  Play Store
-                </Button>
+                  <Button className="bg-[#0d97eb] text-white hover:bg-[#057fdf] transition-colors rounded-full px-6">
+                    <FaAppStore size={24} />
+                    App Store
+                  </Button>
               </motion.div>
             </div>
           </motion.div>
+
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="md:w-1/2"
+            className="md:w-1/2 overflow-hidden"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.3, duration: 1 }}
           >
-            <motion.img
-              src="/placeholder.svg?height=600&width=300"
-              alt="App Frotas"
-              className="mx-auto rounded-lg shadow-lg"
-              whileHover={{ scale: 1.05 }}
-              transition={{ type: "spring", stiffness: 300 }}
-            />
+            <motion.div
+              className="flex space-x-4"
+              animate={{ x: ["0%", "-120%", "0%"] }}
+              transition={{ repeat: Infinity, duration: 30, ease: "easeInOut" }}
+            >
+              <div className="flex-shrink-0 w-[405px] h-[720px]">
+                <img src="/imagem-app-frotas.webp" alt="Imagem App Frotas 1" className="w-full h-full object-cover rounded-xl" />
+              </div>
+              <div className="flex-shrink-0 w-[405px] h-[720px]">
+                <img src="/imagem-app-frotas2.webp" alt="Imagem App Frotas 2" className="w-full h-full object-cover rounded-xl" />
+              </div>
+              <div className="flex-shrink-0 w-[405px] h-[720px]">
+                <img src="/imagem-app-frotas3.webp" alt="Imagem App Frotas 3" className="w-full h-full object-cover rounded-xl" />
+              </div>
+              <div className="flex-shrink-0 w-[405px] h-[720px]">
+                <img src="/imagem-app-frotas4.webp" alt="Imagem App Frotas 4" className="w-full h-full object-cover rounded-xl" />
+              </div>
+              <div className="flex-shrink-0 w-[405px] h-[720px]">
+                <img src="/imagem-app-frotas5.webp" alt="Imagem App Frotas 5" className="w-full h-full object-cover rounded-xl" />
+              </div>
+            </motion.div>
           </motion.div>
         </div>
       </div>
     </section>
   )
 }
-

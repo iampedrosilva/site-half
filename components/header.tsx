@@ -1,9 +1,8 @@
 "use client"
 
 import { motion } from "framer-motion"
-import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Home, Info, BarChart2, FileText, Smartphone, LogIn, Users, MessageCircle } from "lucide-react"
+import { Home, Info, BarChart2, FileText, Smartphone, MessageCircle } from "lucide-react"
 
 export default function Header() {
   const scrollToSection = (id: string) => {
@@ -28,17 +27,8 @@ export default function Header() {
       animate={{ y: 0 }}
       className="bg-white shadow-sm fixed w-full z-50 top-0"
     >
-      <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <Link href="/" className="flex items-center space-x-2">
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="w-10 h-10 bg-[#0d97eb] rounded-lg flex items-center justify-center text-white font-bold text-xl"
-          >
-            H
-          </motion.div>
-          <span className="text-2xl font-bold text-[#025fc7]">Half Benefícios</span>
-        </Link>
+        <div className="flex items-center justify-between p-4">
+        <img src="/logo-halfbeneficios.png" alt="Logo Half Benefícios" className="h-12" />
         <nav className="hidden md:flex space-x-4">
           {menuItems.map((item) => (
             <motion.div

@@ -11,13 +11,13 @@ const testimonials = [
   },
   {
     name: "Maria Santos",
-    role: "Diretora de RH",
-    content: "O sistema de benefícios da Half é intuitivo e eficiente. Nossos funcionários adoram!",
+    role: "Controladora Interna",
+    content: "O sistema de benefícios da Half é intuitivo e eficiente. Nossos gestores adoram!",
   },
   {
     name: "Carlos Oliveira",
     role: "Secretário de Transportes",
-    content: "Com a Half, conseguimos otimizar nossa frota pública e reduzir custos de manutenção em 30%.",
+    content: "Com a Half, conseguimos otimizar nossa frota pública e reduzir custos de manutenção em 40%.",
   },
 ]
 

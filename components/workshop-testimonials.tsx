@@ -5,18 +5,18 @@ import { motion, AnimatePresence } from "framer-motion"
 
 const testimonials = [
   {
-    name: "Oficina AutoTech",
-    location: "São Paulo, SP",
+    name: "Oficina Scala Auto Center",
+    location: "Guanhães, MG",
     content: "A parceria com a Half Benefícios aumentou nossa eficiência e trouxe mais clientes.",
   },
   {
-    name: "Mecânica Rápida",
-    location: "Rio de Janeiro, RJ",
+    name: "MC Auto Center",
+    location: "Natal, RN",
     content: "O suporte da Half é excelente. Nossos processos melhoraram significativamente.",
   },
   {
-    name: "Oficina do João",
-    location: "Belo Horizonte, MG",
+    name: "Fire Peças",
+    location: "Goiânia, GO",
     content: "Graças à Half, conseguimos expandir nossos serviços e atender mais veículos públicos.",
   },
 ]
