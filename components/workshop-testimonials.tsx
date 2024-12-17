@@ -34,7 +34,7 @@ export default function WorkshopTestimonials() {
   return (
     <section id="testimonials" className="py-12 bg-[#e6f3ff]">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-8 text-[#025fc7]">Depoimentos das Oficinas Parceiras</h2>
+        <h2 className="text-3xl font-bold text-center mb-8 text-[#025fc7]">Depoimentos das oficinas parceiras</h2>
         <div className="relative h-40">
           <AnimatePresence initial={false}>
             <motion.div
