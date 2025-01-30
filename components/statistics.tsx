@@ -1,13 +1,16 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import { motion } from "framer-motion"
 import { Car, Wrench, FileCheck } from "lucide-react"
+import { useInView } from "framer-motion";
 
-const AnimatedCounter = ({ end, duration }: { end: number; duration: number }) => {
+const AnimatedCounter = ({ end, duration, start }: { end: number; duration: number; start: boolean }) => {
   const [count, setCount] = useState(0)
 
   useEffect(() => {
+    if (!start) return;
+
     let startTime: number
     let animationFrame: number
 
@@ -22,14 +25,17 @@ const AnimatedCounter = ({ end, duration }: { end: number; duration: number }) =
 
     animationFrame = requestAnimationFrame(step)
     return () => cancelAnimationFrame(animationFrame)
-  }, [end, duration])
+  }, [end, duration, start])
 
   return <span>{count.toLocaleString()}</span>
 }
 
 export default function Statistics() {
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: true })
+
   return (
-    <section id="statistics" className="py-16 bg-gradient-to-r from-[#025fc7] to-[#0d97eb] text-white">
+    <section ref={ref} id="statistics" className="py-16 bg-gradient-to-r from-[#025fc7] to-[#0d97eb] text-white">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-3 gap-8 items-center">
           <motion.div
@@ -41,7 +47,7 @@ export default function Statistics() {
             <Car className="h-16 w-16 mx-auto mb-4" />
             <h3 className="text-2xl font-bold mb-2">Veículos Geridos</h3>
             <p className="text-4xl font-bold">
-              <AnimatedCounter end={1681} duration={5000} />+
+              <AnimatedCounter end={1836} duration={4000} start={isInView} />+
             </p>
             <p className="text-sm mt-2">Frota pública certificada</p>
           </motion.div>
@@ -54,7 +60,7 @@ export default function Statistics() {
             <Wrench className="h-16 w-16 mx-auto mb-4" />
             <h3 className="text-2xl font-bold mb-2">Oficinas Credenciadas</h3>
             <p className="text-4xl font-bold">
-              <AnimatedCounter end={300} duration={5000} />+
+              <AnimatedCounter end={357} duration={4000} start={isInView} />+
             </p>
             <p className="text-sm mt-2">Rede credenciada regulamentada em todo o Brasil</p>
           </motion.div>
@@ -67,7 +73,7 @@ export default function Statistics() {
             <FileCheck className="h-16 w-16 mx-auto mb-4" />
             <h3 className="text-2xl font-bold mb-2">Orçamentos Aprovados</h3>
             <p className="text-4xl font-bold">
-              <AnimatedCounter end={5000} duration={4000} />+
+              <AnimatedCounter end={5650} duration={4000} start={isInView} />+
             </p>
             <p className="text-sm mt-2">Atualizados em tempo real</p>
           </motion.div>

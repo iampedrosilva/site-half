@@ -32,7 +32,7 @@ export default function Testimonials() {
   }, [])
 
   return (
-    <section className="py-12 bg-gradient-to-r from-[#025fc7] to-[#0d97eb] text-white">
+    <section id="testimonials" className="py-12 bg-gradient-to-r from-[#025fc7] to-[#0d97eb] text-white">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-8">O que nossos clientes dizem</h2>
         <div className="relative h-40">

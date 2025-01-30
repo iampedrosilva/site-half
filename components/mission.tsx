@@ -4,8 +4,8 @@ import { motion } from "framer-motion"
 import { Target, Heart, Shield } from "lucide-react"
 
 const missionItems = [
-  { icon: Target, title: "Missão", description: "Oferecer soluções inovadoras em gestão de benefícios e frotas para órgãos públicos, promovendo eficiência transparência." },
-  { icon: Heart, title: "Valores", description: "Integridade, inovação, excelência no atendimento e compromisso com o setor público." },
+  { icon: Target, title: "Missão", description: "Oferecer soluções inovadoras em gestão de benefícios para setores públicos e privados, promovendo eficiência transparência." },
+  { icon: Heart, title: "Valores", description: "Integridade, inovação, excelência no atendimento e compromisso." },
   { icon: Shield, title: "Princípios", description: "Transparência, responsabilidade, sustentabilidade e melhoria contínua em todos os nossos serviços." },
 ]
 

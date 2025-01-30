@@ -8,7 +8,13 @@ export default function Header() {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id)
     if (element) {
-      element.scrollIntoView({ behavior: "smooth", block: "start" })
+      // Define o offset (em pixels) que você deseja ajustar
+      const offset = 80 // Ajuste esse valor conforme necessário
+      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset
+      window.scrollTo({
+        top: elementPosition - offset,
+        behavior: "smooth",
+      })
     }
   }
 

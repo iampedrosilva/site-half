@@ -4,18 +4,18 @@ import { motion } from "framer-motion"
 import { CreditCard, Pill, User, Coffee, UtensilsCrossed, Building, Fuel, Award, Gift, TreesIcon as Tree, Briefcase, Car, FileText, MoreHorizontal } from "lucide-react"
 
 const benefits = [
+  { icon: Car, name: "Gestão de Frotas" },
+  { icon: Fuel, name: "Combustível" },
+  { icon: Coffee, name: "Alimentação" },
+  { icon: UtensilsCrossed, name: "Refeição" },
   { icon: CreditCard, name: "Convênio" },
   { icon: Pill, name: "Farmácia" },
   { icon: User, name: "Servidor" },
-  { icon: Coffee, name: "Alimentação" },
-  { icon: UtensilsCrossed, name: "Refeição" },
   { icon: Building, name: "Gestão de Farmácia PBM" },
-  { icon: Fuel, name: "Combustível" },
   { icon: Award, name: "Premiação" },
   { icon: Gift, name: "Presente" },
   { icon: Tree, name: "Natal" },
   { icon: Briefcase, name: "Empresarial" },
-  { icon: Car, name: "Gestão de Frotas" },
   { icon: FileText, name: "Orçamentos Eletrônicos" },
   { icon: MoreHorizontal, name: "Outros Orçamentos" }
 ]

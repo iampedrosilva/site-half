@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 const metrics = [
   { label: "Redução de Custos", value: 40, suffix: "%" },
   { label: "Aumento na Eficiência", value: 30, suffix: "%" },
-  { label: "Veículos Geridos", value: 1681, suffix: "+" },
+  { label: "Veículos Geridos", value: 1.836, suffix: "+" },
 ]
 
 export default function PerformanceMetrics() {
