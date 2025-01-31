@@ -43,33 +43,35 @@ const statesPaths: { [key: string]: string } = {
 export default function BrazilMap({ activeStates, onStateHover, className = "" }: BrazilMapProps) {
   return (
     <svg
-      viewBox="0 800"
-      className={className}
+      viewBox="0 0 870 870"
+      className={`w-full h-auto ${className}`}
       onMouseLeave={() => onStateHover(null)}
     >
-      {Object.entries(statesPaths).map(([state, path]) => (
-        <motion.path
-          key={state}
-          d={path}
-          stroke="#000000" // cor da borda
-          strokeWidth="1"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          initial={{ opacity: 0.5 }}
-          animate={{
-            opacity: activeStates.includes(state) ? 1 : 0.5,
-            fill: activeStates.includes(state) ? "#0d97eb" : "#e5e7eb"
-          }}
-          whileHover={{
-            opacity: 1,
-            scale: 1.05,
-            fill: "#025fc7"
-          }}
-          onMouseEnter={() => onStateHover(state)}
-          className="cursor-pointer transition-colors"
-        />
-      ))}
+      {Object.entries(statesPaths).map(([state, path]) => {
+        const isActive = activeStates.includes(state)
+        return (
+          <motion.path
+            key={state}
+            d={path}
+            stroke="#000000"
+            strokeWidth="1"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            initial={{ opacity: 0.5 }}
+            animate={{
+              opacity: isActive ? 1 : 0.3, // Estados inativos com opacidade reduzida
+              fill: isActive ? "#0d97eb" : "#e5e7eb" // Estados inativos com cor cinza
+            }}
+            whileHover={{
+              opacity: 1, // Aumenta a opacidade ao passar o mouse
+              scale: 1.05, // Aumenta ligeiramente o tamanho
+              fill: isActive ? "#025fc7" : "#cccccc" // Muda a cor ao passar o mouse
+            }}
+            onMouseEnter={() => onStateHover(state)} // Sempre envia o estado, mesmo se inativo
+            className="cursor-pointer transition-colors"
+          />
+        )
+      })}
     </svg>
   )
 }
-
