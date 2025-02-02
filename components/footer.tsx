@@ -1,36 +1,50 @@
-import Link from "next/link"
+import { Info } from "lucide-react"
 
 export default function Footer() {
   return (
-    <footer className="bg-[#025fc7] text-white py-8">
+    <footer className="bg-[#025fc7] text-white py-12">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-3 gap-8">
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Sobre Nós</h3>
-            <p className="text-gray-200">Half Benefícios é líder em gestão de benefícios e frotas para órgãos públicos no Brasil.</p>
-          </div>
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Links Rápidos</h3>
-            <ul className="space-y-2">
-              <li><Link href="https://frotas.halfbeneficios.com/" target="_blank" rel="noopener noreferrer" className="hover:text-[#0d97eb] transition-colors">Frotas</Link></li>
-              <li><Link href="https://financeiro.halfbeneficios.com/" target="_blank" rel="noopener noreferrer" className="hover:text-[#0d97eb] transition-colors">Financeiro</Link></li>
-              <li><Link href="#" className="hover:text-[#0d97eb] transition-colors">Tutoriais</Link></li>
-              <li><Link href="#" className="hover:text-[#0d97eb] transition-colors">Política de Privacidade</Link></li>
-              <li><Link href="#" className="hover:text-[#0d97eb] transition-colors">Termos de Uso</Link></li>
+        <div className="max-w-3xl mx-auto mb-12">
+          {/* Seção Sobre */}
+          <div className="space-y-6 text-center">
+            <div className="flex items-center justify-center gap-2 mb-6">
+              <Info className="w-8 h-8 text-white" />
+              <h3 className="text-2xl font-bold">Sobre Nós</h3>
+            </div>
+            <p className="text-gray-200 text-lg text-justify">
+              Com apenas 2 anos de atuação no mercado de benefícios, construímos uma trajetória 
+              marcada pela excelência no gerenciamento de manutenção de frotas públicas. Atuamos 
+              com <strong className="text-white">legalidade</strong>, <strong className="text-white">transparência</strong> e 
+              <strong className="text-white"> objetividade</strong>, provando diariamente que não somos 
+              mais uma empresa no setor, mas sim a escolha certa para quem busca:
+            </p>
+            <ul className="text-gray-200 space-y-3 text-lg pl-0 list-none">
+              <li className="flex items-center justify-center gap-2">
+                <span className="text-white">✓</span> Controle eficiente de recursos
+              </li>
+              <li className="flex items-center justify-center gap-2">
+                <span className="text-white">✓</span> Gestão estratégica de frotas
+              </li>
+              <li className="flex items-center justify-center gap-2">
+                <span className="text-white">✓</span> Relacionamento transparente
+              </li>
+              <li className="flex items-center justify-center gap-2">
+                <span className="text-white">✓</span> Tecnologia integrada
+              </li>
             </ul>
           </div>
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Contato</h3>
-            <p className="text-gray-200">Email: atendimento@halfbeneficios.com</p>
-            <p className="text-gray-200">Telefone: (62) 3088-6580</p>
-            <p className="text-gray-200">WhatsApp: (62) 99972-5806</p>
-          </div>
         </div>
-        <div className="mt-8 text-center text-gray-200">
-          <p>&copy; 2023 Half Benefícios LTDA. Todos os direitos reservados.</p>
+
+        {/* Rodapé Inferior */}
+        <div className="pt-8 border-t border-white/20 text-center">
+          <p className="text-gray-200 mb-4">
+            © 2024 Half Benefícios LTDA - CNPJ: 43.091.320/0001-07
+          </p>
+          <p className="text-gray-200 italic">
+            "Mais que gestão em benefícios, construímos relações de confiança"
+          </p>
         </div>
       </div>
     </footer>
   )
 }
-

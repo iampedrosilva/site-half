@@ -11,6 +11,7 @@ import Testimonials from "@/components/testimonials";
 import WorkshopTestimonials from "@/components/workshop-testimonials";
 import AppPromo from "@/components/app-promo";
 import Footer from "@/components/footer";
+import Location from "@/components/location";
 
 export const metadata: Metadata = {
   title: 'Half Benefícios | Tecnologia que faz a diferença',
@@ -41,6 +42,7 @@ export default function Home() {
         <Testimonials />
         <WorkshopTestimonials />
         <AppPromo />
+        <Location/>
       </main>
       <Footer />
     </div>
