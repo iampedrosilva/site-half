@@ -10,12 +10,8 @@ const slides = [
     alt: "Gestão de Frota Pública"
   },
   {
-    image: "/banner1.webp?height=600&width=1200&text=Oficinas+Credenciadas+em+Ação",
+    image: "/banner2.webp?height=600&width=1200&text=Oficinas+Credenciadas+em+Ação",
     alt: "Oficinas Credenciadas em Ação"
-  },
-  {
-    image: "/banner1.webp?height=600&width=1200&text=Veículos+em+Manutenção",
-    alt: "Veículos sendo Reparados ou Inspecionados"
   }
 ]
 

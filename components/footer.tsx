@@ -12,7 +12,7 @@ export default function Footer() {
               <h3 className="text-2xl font-bold">Sobre Nós</h3>
             </div>
             <p className="text-gray-200 text-lg text-justify">
-              Com apenas 2 anos de atuação no mercado de benefícios, construímos uma trajetória 
+              Em 2 anos de atuação no mercado de benefícios, construímos uma trajetória 
               marcada pela excelência no gerenciamento de manutenção de frotas públicas. Atuamos 
               com <strong className="text-white">legalidade</strong>, <strong className="text-white">transparência</strong> e 
               <strong className="text-white"> objetividade</strong>, provando diariamente que não somos 

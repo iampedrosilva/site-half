@@ -9,7 +9,7 @@ import { GiBrazilFlag } from "react-icons/gi"
 const states = {
   AC: { name: "Acre", vehicles: 0, workshops: 0 },
   AL: { name: "Alagoas", vehicles: 0, workshops: 0 },
-  AP: { name: "Amapá", vehicles: 0, workshops: 0 },
+  AP: { name: "Amapá", vehicles: 2, workshops: 4 },
   AM: { name: "Amazonas", vehicles: 0, workshops: 0 },
   BA: { name: "Bahia", vehicles: 220, workshops: 42 },
   CE: { name: "Ceará", vehicles: 0, workshops: 0 },

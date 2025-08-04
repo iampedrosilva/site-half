@@ -47,7 +47,7 @@ export default function Statistics() {
             <Car className="h-16 w-16 mx-auto mb-4" />
             <h3 className="text-2xl font-bold mb-2">Veículos Geridos</h3>
             <p className="text-4xl font-bold">
-              <AnimatedCounter end={1836} duration={4000} start={isInView} />+
+              <AnimatedCounter end={2489} duration={4000} start={isInView} />+
             </p>
             <p className="text-sm mt-2">Frota pública certificada</p>
           </motion.div>
@@ -60,7 +60,7 @@ export default function Statistics() {
             <Wrench className="h-16 w-16 mx-auto mb-4" />
             <h3 className="text-2xl font-bold mb-2">Oficinas Credenciadas</h3>
             <p className="text-4xl font-bold">
-              <AnimatedCounter end={357} duration={4000} start={isInView} />+
+              <AnimatedCounter end={568} duration={4000} start={isInView} />+
             </p>
             <p className="text-sm mt-2">Rede credenciada regulamentada em todo o Brasil</p>
           </motion.div>
@@ -73,7 +73,7 @@ export default function Statistics() {
             <FileCheck className="h-16 w-16 mx-auto mb-4" />
             <h3 className="text-2xl font-bold mb-2">Orçamentos Aprovados</h3>
             <p className="text-4xl font-bold">
-              <AnimatedCounter end={5650} duration={4000} start={isInView} />+
+              <AnimatedCounter end={6838} duration={4000} start={isInView} />+
             </p>
             <p className="text-sm mt-2">Atualizados em tempo real</p>
           </motion.div>

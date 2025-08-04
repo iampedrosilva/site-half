@@ -8,7 +8,7 @@ export default function Location() {
   const location = {
     city: "Goiânia",
     address: "Rua S-1, nº 260, St. Bueno, Goiânia – GO, 74230-220",
-    phone: "(62) 3088-6580",
+    phone: "(62) 3142-2026",
     whatsapp: "(62) 99972-5806",
     email: "atendimento@halfbeneficios.com",
     hours: "Segunda a Sexta: 08h às 18h\nNão atendemos aos sábados, domingos e feriados",
