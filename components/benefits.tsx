@@ -1,11 +1,12 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { CreditCard, Pill, User, Coffee, UtensilsCrossed, Building, Fuel, Award, Gift, TreesIcon as Tree, Briefcase, Car, FileText, MoreHorizontal } from "lucide-react"
+import { MonitorCog, CreditCard, Pill, User, Coffee, UtensilsCrossed, Building, Fuel, Award, Gift, TreesIcon as Tree, Briefcase, Car, FileText, MoreHorizontal } from "lucide-react"
 
 const benefits = [
-  { icon: Car, name: "Gestão de Frotas" },
+  { icon: MonitorCog, name: "Gestão de Frotas" },
   { icon: Fuel, name: "Combustível" },
+  { icon: Car, name: "Locação de Veículos" },
   { icon: Coffee, name: "Alimentação" },
   { icon: UtensilsCrossed, name: "Refeição" },
   { icon: CreditCard, name: "Convênio" },
