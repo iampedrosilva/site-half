@@ -8,20 +8,20 @@ export default function Hero() {
   const [hoveredMetric, setHoveredMetric] = useState<number | null>(null)
 
   const metrics = [
-    { value: "R$ 26,5 milhões",    label: "Transacionados",         icon: HandCoins, color: "text-emerald-400 drop-shadow-lg" },
-    { value: "12 estados + DF",    label: "Presença nacional",      icon: Map,       color: "text-yellow-400 drop-shadow-lg" },
-    { value: "2.489+",             label: "Veículos geridos",       icon: Car,       color: "text-pink-400 drop-shadow-lg" },
-    { value: "30%",                label: "Aumento na Eficiência",  icon: Zap,       color: "text-orange-400 drop-shadow-lg" },
+    { value: "R$ 29,9 milhões", label: "Transacionados", icon: HandCoins, color: "text-emerald-400 drop-shadow-lg" },
+    { value: "12 estados + DF", label: "Presença nacional", icon: Map, color: "text-yellow-400 drop-shadow-lg" },
+    { value: "2.786+", label: "Veículos geridos", icon: Car, color: "text-pink-400 drop-shadow-lg" },
+    { value: "30%", label: "Aumento na Eficiência", icon: Zap, color: "text-orange-400 drop-shadow-lg" },
   ]
 
   return (
     <section className="relative bg-white overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-cyan-50 opacity-80" />
-      
+
       <div className="relative max-w-7xl mx-auto px-6 py-20 lg:py-32">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
-          {/* Texto */}
+
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
@@ -41,11 +41,55 @@ export default function Hero() {
               Controle total de manutenção, benefícios e custos da sua frota pública ou privada com a tecnologia que já é referência em prefeituras e empresas por todo o Brasil.
             </p>
 
+            {/* CTA - Seja um Credenciado (compacto + shine elegante) */}
+            <motion.div
+              initial={{ opacity: 0, y: 14 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.45, delay: 0.25 }}
+              className="mt-8 flex justify-center lg:justify-start"
+            >
+              <motion.a
+                href="https://frotas.halfbeneficios.com/register"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.04 }}
+                whileTap={{ scale: 0.96 }}
+                className="relative inline-flex items-center gap-3
+             px-12 py-4
+             min-w-[300px] justify-center
+             rounded-xl
+             bg-gradient-to-r from-[#025fc7] to-[#0d97eb]
+             text-white text-sm font-semibold
+             shadow-md hover:shadow-lg
+             overflow-hidden"
+              >
+                {/* Shine layer */}
+                <motion.span
+                  className="absolute inset-0 -translate-x-full
+               bg-gradient-to-r from-transparent via-white/35 to-transparent
+               skew-x-12"
+                  animate={{ x: ["-100%", "120%"] }}
+                  transition={{
+                    duration: 2.8,
+                    ease: "linear",
+                    repeat: Infinity,
+                    repeatDelay: 1.2,
+                  }}
+                />
+
+                {/* Conteúdo */}
+                <BadgeCheck className="w-4 h-4 relative z-10" />
+                <span className="relative z-10">
+                  Seja um credenciado
+                </span>
+              </motion.a>
+            </motion.div>
+
             {/* Badges de confiança */}
-            <div className="mt-14 flex flex-wrap gap-8 justify-center lg:justify-start">
+            <div className="mt-8 flex flex-wrap gap-8 justify-center lg:justify-start">
               <div className="flex items-center gap-3">
                 <Wrench className="w-8 h-8 text-[#025fc7]" />
-                <span className="font-medium text-gray-800">+568 Credenciadas</span>
+                <span className="font-medium text-gray-800">+692 Credenciadas</span>
               </div>
               <div className="flex items-center gap-3">
                 <Gauge className="w-8 h-8 text-[#0d97eb]" />
@@ -54,7 +98,7 @@ export default function Hero() {
             </div>
           </motion.div>
 
-          {/* Mockup do celular - VERSÃO FINAL COM FOOTER LINDO */}
+
           <motion.div
             initial={{ opacity: 0, scale: 0.92 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -106,7 +150,7 @@ export default function Hero() {
                   ))}
                 </div>
 
-                {/* Barra de progresso */}
+
                 <div className="px-6 pt-6 pb-4">
                   <div className="flex items-center gap-3 mb-3">
                     <div className="flex-1 h-3 bg-white/30 rounded-full overflow-hidden">
@@ -121,7 +165,6 @@ export default function Hero() {
                   </div>
                 </div>
 
-                {/* FOOTER LINDO DO DASHBOARD ORIGINAL (agora aqui!) */}
                 <div className="bg-gray-50 px-6 py-5 text-center">
                   <p className="text-xs text-gray-600 font-medium flex items-center justify-center gap-2">
                     <BadgeCheck className="w-4 h-4 text-[#025fc7]" />
