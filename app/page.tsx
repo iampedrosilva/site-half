@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import AnimatedBackground from "@/components/animated-background";
 import Header from "@/components/header";
 import Hero from "@/components/hero";
 import Benefits from "@/components/benefits";
@@ -29,6 +30,7 @@ export default function Home() {
   
   return (
     <div className="flex flex-col min-h-screen">
+      <AnimatedBackground />
       <Header />
       
       <main className="flex-grow">

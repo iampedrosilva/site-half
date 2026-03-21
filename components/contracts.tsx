@@ -55,7 +55,10 @@ export default function Contracts() {
       <div className="absolute inset-0 bg-gradient-to-r from-[#025fc7]/10 to-[#0d97eb]/10 transform rotate-[-10deg] scale-125 -z-10"></div>
 
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-12 text-[#025fc7]">
+        <p className="label-tech text-center mb-3">
+          presença nacional · 12 estados + DF
+        </p>
+        <h2 className="text-3xl lg:text-4xl font-black text-center mb-12 text-[#025fc7]">
           Contratos Ativos
         </h2>
         <div className="grid md:grid-cols-2 gap-12 items-center">

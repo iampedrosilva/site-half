@@ -2,18 +2,195 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ─── Base ──────────────────────────────────────────────── */
 body {
   font-family: Arial, Helvetica, sans-serif;
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
 }
 
 @layer base {
   :root {
     --radius: 0.5rem;
   }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* ─── Utilities ──────────────────────────────────────────── */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Gradiente de texto animado */
+  .animate-gradient-text {
+    background-size: 200% auto;
+    animation: gradient-shift 5s linear infinite;
+  }
+
+  /* Glass morphism */
+  .glass {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .glass-dark {
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  /* Glow text */
+  .text-glow {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.8),
+      0 0 40px rgba(255, 255, 255, 0.4);
+  }
+
+  .text-glow-blue {
+    text-shadow: 0 0 20px rgba(13, 151, 235, 0.6),
+      0 0 40px rgba(2, 95, 199, 0.3);
+  }
+
+  /* Atrasos de animação */
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+  .animation-delay-6000 {
+    animation-delay: 6s;
+  }
+  .animation-delay-8000 {
+    animation-delay: 8s;
+  }
+
+  /* Grid de pontos */
+  .dot-grid {
+    background-image: radial-gradient(
+      circle,
+      rgba(2, 95, 199, 0.18) 1px,
+      transparent 1px
+    );
+    background-size: 30px 30px;
+  }
+
+  /* Shimmer effect */
+  .shimmer {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .shimmer::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.12),
+      transparent
+    );
+    animation: shimmer-slide 3.5s linear infinite;
+  }
+
+  /* Borda gradiente animada */
+  .gradient-border {
+    position: relative;
+    background: white;
+    border-radius: 1rem;
+  }
+
+  .gradient-border::before {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    background: linear-gradient(
+      90deg,
+      #025fc7,
+      #0d97eb,
+      #60a5fa,
+      #025fc7
+    );
+    background-size: 200% 100%;
+    animation: border-spin 3s linear infinite;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .gradient-border:hover::before {
+    opacity: 1;
+  }
+}
+
+/* ─── Scroll suave nativo (reforço) ─────────────────────── */
+* {
+  scroll-behavior: smooth;
+}
+
+/* ─── Carrossel infinito horizontal ─────────────────────── */
+@keyframes scroll-left {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.animate-scroll-left {
+  animation: scroll-left 28s linear infinite;
+}
+
+.animate-scroll-left:hover {
+  animation-play-state: paused;
+}
+
+/* ─── Tipografia tech ────────────────────────────────────── */
+.label-tech {
+  font-family: ui-monospace, 'Geist Mono', monospace;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #0d97eb;
+}
+
+.number-tech {
+  font-family: ui-monospace, 'Geist Mono', monospace;
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+}
+
+/* ─── Pulse suave para dots ──────────────────────────────── */
+@keyframes soft-pulse {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50%       { opacity: 1;   transform: scale(1.4); }
+}
+
+/* ─── Data flow (ponto percorrendo linha) ────────────────── */
+@keyframes flow-dot {
+  0%   { left: 0%;   opacity: 0; }
+  10%  { opacity: 1; }
+  90%  { opacity: 1; }
+  100% { left: 100%; opacity: 0; }
+}
+
+.flow-dot {
+  animation: flow-dot 2.4s ease-in-out infinite;
+}
+
+/* ─── Terminal cursor ────────────────────────────────────── */
+@keyframes cursor-blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+.cursor-blink {
+  animation: cursor-blink 1s step-end infinite;
 }
