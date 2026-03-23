@@ -177,7 +177,7 @@ export default function Footer() {
         {/* Barra inferior */}
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-white/40 text-xs font-mono">
-            © 2024 Half Benefícios LTDA · CNPJ: 43.091.320/0001-07
+            © 2021 Half Benefícios LTDA · CNPJ: 43.091.320/0001-07
           </p>
           <p className="text-white/35 text-xs italic">
             "Mais que gestão em benefícios, construímos relações de confiança"
