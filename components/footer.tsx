@@ -19,6 +19,7 @@ const navLinks = [
   { label: "Contratos", href: "#contracts" },
   { label: "Depoimentos", href: "#testimonials" },
   { label: "Aplicativo", href: "#app" },
+  { label: "Half Pay", href: "#half-pay" },
   { label: "Localização", href: "#location" },
 ]
 
@@ -157,7 +158,7 @@ export default function Footer() {
             <div className="mt-6 space-y-2">
               {[
                 { label: "Plataforma Frotas", href: "https://frotas.halfbeneficios.com/" },
-                { label: "Módulo Financeiro", href: "https://financeiro.halfbeneficios.com/" },
+                { label: "Half Pay", href: "https://financeiro.halfbeneficios.com/" },
               ].map((p, i) => (
                 <a
                   key={i}

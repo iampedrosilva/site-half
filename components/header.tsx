@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
-import { CreditCard, Info, BarChart2, FileText, Smartphone, MessageCircle, MapPin, Menu } from "lucide-react"
+import { CreditCard, Info, BarChart2, FileText, Smartphone, MessageCircle, MapPin, Menu, Wallet } from "lucide-react"
 import { useState } from "react"
 import {
   Dialog,
@@ -10,7 +10,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog"
-import { FaCar, FaMoneyBillWave, FaComments } from "react-icons/fa"
+import { FaCar, FaComments } from "react-icons/fa"
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -36,6 +36,7 @@ export default function Header() {
     { id: "contracts", label: "Contratos", icon: FileText },
     { id: "testimonials", label: "Depoimentos", icon: MessageCircle },
     { id: "app", label: "Aplicativo", icon: Smartphone },
+    { id: "half-pay", label: "Half Pay", icon: Wallet },
     { id: "location", label: "Localização", icon: MapPin },
   ]
 
@@ -44,20 +45,20 @@ export default function Header() {
       icon: FaCar,
       title: "Plataforma Frotas",
       description: "Gestão completa de veículos",
-      link: "https://frotas.halfbeneficios.com/"
+      link: "https://frotas.halfbeneficios.com/",
     },
     {
-      icon: FaMoneyBillWave,
-      title: "Módulo Financeiro",
-      description: "Controle financeiro integrado",
-      link: "https://financeiro.halfbeneficios.com/"
+      icon: Wallet,
+      title: "Half Pay",
+      description: "Faturamentos, repasses e antecipações",
+      link: "https://financeiro.halfbeneficios.com/",
     },
     {
       icon: FaComments,
       title: "Chat de Atendimento (Colaborador)",
       description: "Suporte rápido e eficiente",
-      link: "https://chat.halfbeneficios.com/"
-    }
+      link: "https://chat.halfbeneficios.com/",
+    },
   ]
 
   return (
@@ -67,7 +68,6 @@ export default function Header() {
         animate={{ y: 0 }}
         className="bg-white shadow-sm fixed w-full z-50 top-0 h-18 md:h-20 flex items-center"
       >
-
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
@@ -78,7 +78,7 @@ export default function Header() {
             />
 
             {/* Menu Desktop */}
-            <nav className="hidden md:flex items-center gap-4">
+            <nav className="hidden md:flex items-center gap-2">
               {menuItems.map((item) => (
                 <motion.div
                   key={item.id}
@@ -106,7 +106,7 @@ export default function Header() {
                 Acesso
               </Button>
 
-              {/* Menu Mobile */}
+              {/* Menu Mobile toggle */}
               <Button
                 variant="ghost"
                 className="md:hidden p-2"
@@ -156,9 +156,9 @@ export default function Header() {
                 href={option.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-4 p-4 rounded-lg border hover:bg-[#e6f3ff] transition-colors"
+                className="flex items-center gap-4 p-4 rounded-xl border border-gray-100 hover:bg-[#e6f3ff] hover:border-[#025fc7]/20 transition-all duration-200"
               >
-                <div className="p-3 bg-[#025fc7]/10 rounded-full">
+                <div className="p-3 bg-[#025fc7]/10 rounded-xl">
                   <option.icon className="w-6 h-6 text-[#025fc7]" />
                 </div>
                 <div>
