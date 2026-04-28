@@ -1,6 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
+import Image from "next/image"
 import { BadgeCheck, MapPin, Phone, Mail, ExternalLink } from "lucide-react"
 import { FaWhatsapp } from "react-icons/fa"
 
@@ -75,7 +76,14 @@ export default function Footer() {
           {/* Col 1: Brand */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-6">
-              <img src="/logo-halfbeneficios.png" alt="Half Benefícios" className="h-10 brightness-0 invert" />
+              <Image
+                src="/logo-halfbeneficios.png"
+                alt="Half Benefícios"
+                width={904}
+                height={429}
+                sizes="150px"
+                className="h-10 w-auto brightness-0 invert"
+              />
             </div>
 
             <p className="text-white/70 text-sm leading-relaxed mb-6 max-w-sm">

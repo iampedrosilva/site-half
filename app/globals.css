@@ -132,11 +132,6 @@ body {
   }
 }
 
-/* ─── Scroll suave nativo (reforço) ─────────────────────── */
-* {
-  scroll-behavior: smooth;
-}
-
 /* ─── Carrossel infinito horizontal ─────────────────────── */
 @keyframes scroll-left {
   from { transform: translateX(0); }
@@ -294,4 +289,138 @@ body {
 
 .cursor-blink {
   animation: cursor-blink 1s step-end infinite;
+}
+
+/* ─── Background animado leve ────────────────────────────── */
+.site-background {
+  z-index: -10;
+  contain: layout paint style;
+  transform: translateZ(0);
+}
+
+.bg-blob,
+.bg-scan-line,
+.bg-node,
+.bg-shimmer,
+.bg-floating-dot {
+  will-change: transform, opacity;
+}
+
+.bg-blob {
+  animation: bg-blob-drift var(--duration) ease-in-out var(--delay) infinite;
+}
+
+.bg-scan-line {
+  animation: bg-scan-line var(--duration) ease-in-out var(--delay) infinite;
+  transform-origin: center;
+}
+
+.bg-node {
+  opacity: 0.14;
+  animation: bg-node-pulse var(--duration) ease-in-out var(--delay) infinite;
+}
+
+.bg-node::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(2, 95, 199, 0.2);
+  border-radius: inherit;
+  animation: bg-node-ring var(--ring-duration) ease-out var(--delay) infinite;
+}
+
+.bg-shimmer {
+  background: linear-gradient(135deg, transparent 40%, rgba(2,95,199,0.025) 50%, transparent 60%);
+  background-size: 200% 200%;
+  animation: bg-shimmer 14s linear infinite;
+}
+
+.bg-floating-dot {
+  animation: bg-dot-float var(--duration) ease-in-out var(--delay) infinite alternate;
+}
+
+@keyframes bg-blob-drift {
+  0%, 100% {
+    transform: translate3d(var(--base-x, 0px), var(--base-y, 0px), 0) translate3d(0, 0, 0) scale(1) rotate(0deg);
+  }
+  36% {
+    transform: translate3d(var(--base-x, 0px), var(--base-y, 0px), 0) translate3d(var(--x1), var(--y1), 0) scale(var(--s1)) rotate(var(--rotate));
+  }
+  68% {
+    transform: translate3d(var(--base-x, 0px), var(--base-y, 0px), 0) translate3d(var(--x2), var(--y2), 0) scale(var(--s2)) rotate(var(--rotate-back));
+  }
+}
+
+@keyframes bg-scan-line {
+  0%, 100% {
+    opacity: 0;
+    transform: scaleX(0.35);
+  }
+  50% {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}
+
+@keyframes bg-node-pulse {
+  0%, 100% {
+    opacity: 0.1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.25;
+    transform: scale(1.55);
+  }
+}
+
+@keyframes bg-node-ring {
+  0% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(3);
+  }
+}
+
+@keyframes bg-shimmer {
+  0%   { background-position: 0% 0%; }
+  100% { background-position: 100% 100%; }
+}
+
+@keyframes bg-dot-float {
+  0% {
+    opacity: var(--dot-opacity-low);
+    transform: translate3d(0, -10px, 0);
+  }
+  100% {
+    opacity: var(--dot-opacity);
+    transform: translate3d(0, 10px, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .animate-gradient-text,
+  .animate-scroll-left,
+  .shimmer::after,
+  .gradient-border::before,
+  .holo-card,
+  .pulse-ring,
+  .data-stream,
+  .flow-dot,
+  .cursor-blink,
+  .bg-blob,
+  .bg-scan-line,
+  .bg-node,
+  .bg-node::after,
+  .bg-shimmer,
+  .bg-floating-dot {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+  }
 }

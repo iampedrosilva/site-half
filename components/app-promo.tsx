@@ -1,6 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
+import Image from "next/image"
 import { FaGooglePlay, FaAppStore } from "react-icons/fa"
 import { CheckCircle2, Smartphone, Shield, Zap } from "lucide-react"
 import Link from "next/link"
@@ -156,18 +157,21 @@ export default function AppPromo() {
                 {duplicated.map((n, i) => (
                   <div
                     key={i}
-                    className="flex-shrink-0 w-[200px] h-[360px] rounded-2xl overflow-hidden border border-white/20 shadow-2xl bg-white/10"
+                    className="flex flex-col flex-shrink-0 w-[200px] h-[360px] rounded-2xl overflow-hidden border border-white/20 shadow-2xl bg-white/10"
                   >
                     {/* Barra de phone */}
                     <div className="flex items-center justify-center py-2 px-4 bg-white/10 backdrop-blur-sm">
                       <div className="w-16 h-1.5 rounded-full bg-white/30" />
                     </div>
-                    <img
-                      src={`/imagem-app-frotas${n}.webp`}
-                      alt={`App Frotas tela ${n}`}
-                      className="w-full h-full object-cover"
-                      loading="lazy"
-                    />
+                    <div className="relative flex-1 min-h-0">
+                      <Image
+                        src={`/imagem-app-frotas${n}.webp`}
+                        alt={`App Frotas tela ${n}`}
+                        fill
+                        sizes="200px"
+                        className="object-cover"
+                      />
+                    </div>
                   </div>
                 ))}
               </div>

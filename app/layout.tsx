@@ -1,6 +1,5 @@
 import { Inter } from 'next/font/google'
 import './globals.css'
-import SmoothScrollProvider from '@/components/smooth-scroll-provider'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -338,32 +337,9 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
 
-        {/* ── Chat de atendimento ───────────────────────────── */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function(d,t) {
-                var BASE_URL="https://chat.halfbeneficios.com";
-                var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-                g.src=BASE_URL+"/packs/js/sdk.js";
-                g.defer = true;
-                g.async = true;
-                s.parentNode.insertBefore(g,s);
-                g.onload=function(){
-                  window.chatwootSDK.run({
-                    websiteToken: '1TbVBtedjfejmqaoztc3QGAE',
-                    baseUrl: BASE_URL
-                  })
-                }
-              })(document,"script");
-            `
-          }}
-        />
       </head>
       <body className={`${inter.className} pt-20`}>
-        <SmoothScrollProvider>
-          {children}
-        </SmoothScrollProvider>
+        {children}
       </body>
     </html>
   )

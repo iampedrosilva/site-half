@@ -1,6 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { CreditCard, Info, BarChart2, FileText, Smartphone, MessageCircle, MapPin, Menu, Wallet } from "lucide-react"
 import { useState } from "react"
@@ -71,10 +72,14 @@ export default function Header() {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
-            <img
+            <Image
               src="/logo-halfbeneficios.png"
               alt="Logo Half Benefícios"
-              className="h-10 md:h-12"
+              width={904}
+              height={429}
+              priority
+              sizes="(min-width: 768px) 190px, 150px"
+              className="h-10 md:h-12 w-auto"
             />
 
             {/* Menu Desktop */}

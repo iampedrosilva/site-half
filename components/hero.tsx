@@ -2,7 +2,7 @@
 
 import { motion, AnimatePresence } from "framer-motion"
 import { HandCoins, Map, Car, Zap, BadgeCheck, Wrench, Gauge, ArrowUpRight, TrendingUp } from "lucide-react"
-import { useState, useEffect } from "react"
+import { useState } from "react"
 
 const metrics = [
   { value: "R$ 34,2M", label: "Transacionados", icon: HandCoins, color: "text-emerald-400 drop-shadow-lg" },
@@ -10,47 +10,6 @@ const metrics = [
   { value: "3.007+", label: "Veículos geridos", icon: Car, color: "text-pink-400 drop-shadow-lg" },
   { value: "40%", label: "Redução de custos", icon: Zap, color: "text-orange-400 drop-shadow-lg" },
 ]
-
-// Ticker de dados — simula feed em tempo real
-const tickerItems = [
-  "✓ Orçamento #7821 aprovado — Goiânia/GO",
-  "✓ Repasse efetuado — R$ 4.280 — Maceió/AL",
-  "✓ Nova oficina credenciada — Brasília/DF",
-  "✓ Orçamento #7819 aprovado — Manaus/AM",
-  "✓ Frota +12 veículos — Cuiabá/MT",
-  "✓ Antecipação liberada — R$ 1.960 — Fortaleza/CE",
-]
-
-function LiveTicker() {
-  const [index, setIndex] = useState(0)
-
-  useEffect(() => {
-    const t = setInterval(() => setIndex(p => (p + 1) % tickerItems.length), 3000)
-    return () => clearInterval(t)
-  }, [])
-
-  return (
-    <div className="flex items-center gap-3 px-4 py-2 rounded-xl bg-white/80 border border-[#025fc7]/10 shadow-sm overflow-hidden max-w-fit">
-      <div className="flex items-center gap-1.5 flex-shrink-0">
-        <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-        <span className="font-mono text-[9px] uppercase tracking-[0.2em] text-gray-400">ao vivo</span>
-      </div>
-      <div className="h-4 w-px bg-gray-200" />
-      <AnimatePresence mode="wait">
-        <motion.span
-          key={index}
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -10 }}
-          transition={{ duration: 0.4 }}
-          className="text-xs text-gray-600 font-medium whitespace-nowrap"
-        >
-          {tickerItems[index]}
-        </motion.span>
-      </AnimatePresence>
-    </div>
-  )
-}
 
 export default function Hero() {
   const [hoveredMetric, setHoveredMetric] = useState<number | null>(null)
@@ -102,27 +61,6 @@ export default function Hero() {
             transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
             className="text-center lg:text-left"
           >
-            {/* Live ticker */}
-            <motion.div
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="flex justify-center lg:justify-start mb-5"
-            >
-              <LiveTicker />
-            </motion.div>
-
-            {/* Badge */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.85 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#025fc7]/10 border border-[#025fc7]/20 text-[#025fc7] text-sm font-semibold mb-6"
-            >
-              <span className="w-2 h-2 rounded-full bg-[#0d97eb] animate-pulse" />
-              Tecnologia que faz a diferença
-            </motion.div>
-
             <h1 className="text-5xl lg:text-6xl xl:text-7xl font-black text-gray-900 leading-tight">
               Gestão de frota<br />
               <span
