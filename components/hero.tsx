@@ -3,6 +3,7 @@
 import { motion, AnimatePresence } from "framer-motion"
 import { HandCoins, Map, Car, Zap, BadgeCheck, Wrench, Gauge, ArrowUpRight, TrendingUp } from "lucide-react"
 import { useState } from "react"
+import Image from "next/image"
 
 const metrics = [
   { value: "R$ 34,2M", label: "Transacionados", icon: HandCoins, color: "text-emerald-400 drop-shadow-lg" },
@@ -61,6 +62,23 @@ export default function Hero() {
             transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
             className="text-center lg:text-left"
           >
+            {/* Badge Grupo RS */}
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="inline-flex items-center gap-2.5 mb-6 px-4 py-2 rounded-full border border-gray-200 bg-white/80 backdrop-blur-sm shadow-sm"
+            >
+              <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-gray-400">Uma empresa do</span>
+              <Image
+                src="/logo-grupo-rs.png"
+                alt="Grupo RS"
+                width={80}
+                height={24}
+                className="h-5 w-auto object-contain"
+              />
+            </motion.div>
+
             <h1 className="text-5xl lg:text-6xl xl:text-7xl font-black text-gray-900 leading-tight">
               Gestão de frota<br />
               <span

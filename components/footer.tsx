@@ -87,7 +87,7 @@ export default function Footer() {
             </div>
 
             <p className="text-white/70 text-sm leading-relaxed mb-6 max-w-sm">
-              Em 2 anos de atuação no mercado de benefícios, construímos uma trajetória marcada pela excelência no
+              Em 3 anos de atuação no mercado de benefícios, construímos uma trajetória marcada pela excelência no
               gerenciamento de manutenção de frotas públicas. Atuamos com{" "}
               <span className="text-white font-semibold">legalidade</span>,{" "}
               <span className="text-white font-semibold">transparência</span> e{" "}
@@ -183,8 +183,22 @@ export default function Footer() {
           </div>
         </div>
 
+        {/* Grupo RS */}
+        <div className="border-t border-white/10 pt-8 mb-6 flex flex-col sm:flex-row items-center justify-center gap-3">
+          <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">
+            Uma empresa do
+          </span>
+          <Image
+            src="/logo-grupo-rs.png"
+            alt="Grupo RS"
+            width={120}
+            height={36}
+            className="h-7 w-auto brightness-0 invert opacity-50"
+          />
+        </div>
+
         {/* Barra inferior */}
-        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="border-t border-white/10 pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-white/40 text-xs font-mono">
             © 2021–2026 Half Benefícios LTDA · CNPJ: 43.091.320/0001-07
           </p>
