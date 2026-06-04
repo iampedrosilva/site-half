@@ -310,10 +310,11 @@ export default function RootLayout({
         <meta name="article:section" content="Tecnologia, Gestão de Frota, Setor Público" />
 
         {/* ── PWA & Favicon ────────────────────────────────── */}
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/logo-halfbeneficios.png" />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="any" />
+        <link rel="shortcut icon" href="/favicon.ico" />
         <meta name="theme-color" content="#025fc7" />
         <meta name="msapplication-TileColor" content="#025fc7" />
+        <meta name="msapplication-TileImage" content="/favicon.ico" />
 
         {/* ── JSON-LD Structured Data ───────────────────────── */}
         <script
