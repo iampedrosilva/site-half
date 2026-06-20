@@ -160,7 +160,7 @@ const faqSchema = {
       "name": "O que é a Half Benefícios?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "A Half Benefícios é uma empresa de tecnologia especializada em software de gestão de manutenção de frota pública e privada. Atuamos com prefeituras, órgãos públicos e empresas privadas em todo o Brasil, com presença em 12 estados e no Distrito Federal."
+        "text": "A Half Benefícios é uma empresa de tecnologia especializada em software de gestão de manutenção de frota pública e privada. Atuamos com prefeituras, órgãos públicos e empresas privadas em todo o Brasil, com presença em 20 estados e no Distrito Federal."
       }
     },
     {
@@ -192,7 +192,7 @@ const faqSchema = {
       "name": "Em quais estados a Half Benefícios atua?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "A Half Benefícios possui presença em 12 estados brasileiros mais o Distrito Federal, com mais de 761 oficinas credenciadas, 3.007 veículos gerenciados e mais de R$ 34,2 milhões transacionados na plataforma."
+        "text": "A Half Benefícios possui presença em 20 estados brasileiros mais o Distrito Federal, com mais de 843 oficinas credenciadas, 5.265 veículos gerenciados e mais de R$ 100,1 milhões transacionados na plataforma."
       }
     },
     {
@@ -232,7 +232,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="pt-BR" className="scroll-smooth">
+    <html lang="pt-BR" className="scroll-smooth" suppressHydrationWarning>
       <head>
         {/* ── Charset & Viewport ───────────────────────────── */}
         <meta charSet="UTF-8" />
@@ -249,7 +249,7 @@ export default function RootLayout({
         {/* ── Description rica em keywords ─────────────────── */}
         <meta
           name="description"
-          content="Half Benefícios — software líder em gestão de manutenção de frota pública e privada no Brasil. Plataforma SaaS para prefeituras, órgãos públicos e empresas: controle de manutenção preventiva e corretiva, orçamentos eletrônicos, rede de 761+ oficinas credenciadas, 3.007+ veículos geridos e módulo financeiro Half Pay. Presente em 12 estados + DF."
+          content="Half Benefícios — software líder em gestão de manutenção de frota pública e privada no Brasil. Plataforma SaaS para prefeituras, órgãos públicos e empresas: controle de manutenção preventiva e corretiva, orçamentos eletrônicos, rede de 843+ oficinas credenciadas, 5.265+ veículos geridos e módulo financeiro Half Pay. Presente em 20 estados + DF."
         />
 
         {/* ── Keywords ─────────────────────────────────────── */}
@@ -269,7 +269,7 @@ export default function RootLayout({
         />
         <meta
           property="og:description"
-          content="Plataforma líder em gestão de manutenção de frota pública e privada. +761 oficinas credenciadas, +3.007 veículos geridos, presente em 12 estados + DF. Tecnologia que faz a diferença para prefeituras e empresas em todo o Brasil."
+          content="Plataforma líder em gestão de manutenção de frota pública e privada. +843 oficinas credenciadas, +5.265 veículos geridos, presente em 20 estados + DF. Tecnologia que faz a diferença para prefeituras e empresas em todo o Brasil."
         />
         <meta property="og:image" content={`${SITE_URL}/logo-halfbeneficios.png`} />
         <meta property="og:image:width" content="1200" />
@@ -285,7 +285,7 @@ export default function RootLayout({
         />
         <meta
           name="twitter:description"
-          content="Plataforma líder em gestão de manutenção de frota pública e privada. +761 oficinas, +3.007 veículos, 12 estados + DF."
+          content="Plataforma líder em gestão de manutenção de frota pública e privada. +843 oficinas, +5.265 veículos, 20 estados + DF."
         />
         <meta name="twitter:image" content={`${SITE_URL}/logo-halfbeneficios.png`} />
 
