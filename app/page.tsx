@@ -17,7 +17,7 @@ import Location from "@/components/location";
 
 export const metadata: Metadata = {
   title: 'Half Benefícios | Software de Gestão de Manutenção de Frota Pública e Privada',
-  description: 'Half Benefícios — plataforma líder em software de gestão de manutenção de frota pública e privada no Brasil. Utilizada por prefeituras, câmaras e órgãos públicos em licitações. +761 oficinas credenciadas, +3.007 veículos, 12 estados + DF. Tecnologia que faz a diferença.',
+  description: 'Half Benefícios — plataforma líder em software de gestão de manutenção de frota pública e privada no Brasil. Utilizada por prefeituras, câmaras e órgãos públicos em licitações. +843 oficinas credenciadas, +5.265 veículos, 20 estados + DF. Tecnologia que faz a diferença.',
   keywords: [
     'Half Benefícios',
     'Half',
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     locale: 'pt_BR',
     siteName: 'Half Benefícios',
     title: 'Half Benefícios | Software de Gestão de Manutenção de Frota',
-    description: 'Plataforma líder em gestão de manutenção de frota pública e privada. Utilizada por prefeituras e órgãos públicos em todo o Brasil. +761 oficinas, +3.007 veículos geridos.',
+    description: 'Plataforma líder em gestão de manutenção de frota pública e privada. Utilizada por prefeituras e órgãos públicos em todo o Brasil. +843 oficinas, +5.265 veículos geridos.',
     url: 'https://www.halfbeneficios.com',
     images: [
       {

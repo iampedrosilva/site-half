@@ -74,8 +74,8 @@ const metrics = [
   {
     icon: Car,
     label: "Veículos Geridos",
-    value: 3.007,
-    max: 5.000,
+    value: 5.265,
+    max: 7.000,
     suffix: "+",
     description: "Frota ativa monitorada em tempo real",
     accent: "from-[#60a5fa] to-[#025fc7]",

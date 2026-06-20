@@ -8,32 +8,32 @@ import { GiBrazilFlag } from "react-icons/gi"
 
 const states = {
   AC: { name: "Acre", vehicles: 0, workshops: 0 },
-  AL: { name: "Alagoas", vehicles: 0, workshops: 0 },
-  AP: { name: "Amapá", vehicles: 2, workshops: 4 },
+  AL: { name: "Alagoas", vehicles: 8, workshops: 1 },
+  AP: { name: "Amapá", vehicles: 12, workshops: 6 },
   AM: { name: "Amazonas", vehicles: 0, workshops: 0 },
-  BA: { name: "Bahia", vehicles: 220, workshops: 42 },
-  CE: { name: "Ceará", vehicles: 0, workshops: 0 },
-  DF: { name: "Distrito Federal", vehicles: 65, workshops: 13 },
-  ES: { name: "Espírito Santo", vehicles: 80, workshops: 16 },
-  GO: { name: "Goiás", vehicles: 250, workshops: 50 },
-  MA: { name: "Maranhão", vehicles: 0, workshops: 0 },
+  BA: { name: "Bahia", vehicles: 300, workshops: 37 },
+  CE: { name: "Ceará", vehicles: 12, workshops: 19 },
+  DF: { name: "Distrito Federal", vehicles: 70, workshops: 29 },
+  ES: { name: "Espírito Santo", vehicles: 340, workshops: 27 },
+  GO: { name: "Goiás", vehicles: 1500, workshops: 270 },
+  MA: { name: "Maranhão", vehicles: 20, workshops: 8 },
   MT: { name: "Mato Grosso", vehicles: 0, workshops: 0 },
   MS: { name: "Mato Grosso do Sul", vehicles: 0, workshops: 0 },
-  MG: { name: "Minas Gerais", vehicles: 380, workshops: 76 },
-  PA: { name: "Pará", vehicles: 0, workshops: 0 },
-  PB: { name: "Paraíba", vehicles: 90, workshops: 18 },
-  PR: { name: "Paraná", vehicles: 140, workshops: 28 },
-  PE: { name: "Pernambuco", vehicles: 0, workshops: 0 },
-  PI: { name: "Piauí", vehicles: 0, workshops: 0 },
-  RJ: { name: "Rio de Janeiro", vehicles: 0, workshops: 0 },
-  RN: { name: "Rio Grande do Norte", vehicles: 75, workshops: 15 },
-  RS: { name: "Rio Grande do Sul", vehicles: 140, workshops: 28 },
+  MG: { name: "Minas Gerais", vehicles: 1150, workshops: 136 },
+  PA: { name: "Pará", vehicles: 10, workshops: 3 },
+  PB: { name: "Paraíba", vehicles: 130, workshops: 9 },
+  PR: { name: "Paraná", vehicles: 360, workshops: 47 },
+  PE: { name: "Pernambuco", vehicles: 110, workshops: 9 },
+  PI: { name: "Piauí", vehicles: 25, workshops: 5 },
+  RJ: { name: "Rio de Janeiro", vehicles: 120, workshops: 22 },
+  RN: { name: "Rio Grande do Norte", vehicles: 90, workshops: 39 },
+  RS: { name: "Rio Grande do Sul", vehicles: 180, workshops: 25 },
   RO: { name: "Rondônia", vehicles: 0, workshops: 0 },
   RR: { name: "Roraima", vehicles: 0, workshops: 0 },
-  SC: { name: "Santa Catarina", vehicles: 90, workshops: 18 },
-  SP: { name: "São Paulo", vehicles: 260, workshops: 52 },
-  SE: { name: "Sergipe", vehicles: 0, workshops: 0 },
-  TO: { name: "Tocantins", vehicles: 120, workshops: 24 }
+  SC: { name: "Santa Catarina", vehicles: 60, workshops: 9 },
+  SP: { name: "São Paulo", vehicles: 430, workshops: 78 },
+  SE: { name: "Sergipe", vehicles: 8, workshops: 1 },
+  TO: { name: "Tocantins", vehicles: 330, workshops: 63 }
 };
 
 
@@ -56,7 +56,7 @@ export default function Contracts() {
 
       <div className="container mx-auto px-4">
         <p className="label-tech text-center mb-3">
-          presença nacional · 12 estados + DF
+          presença nacional · 20 estados + DF
         </p>
         <h2 className="text-3xl lg:text-4xl font-black text-center mb-12 text-[#025fc7]">
           Contratos Ativos

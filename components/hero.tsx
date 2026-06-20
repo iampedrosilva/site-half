@@ -6,9 +6,9 @@ import { useState } from "react"
 import Image from "next/image"
 
 const metrics = [
-  { value: "R$ 34,2M", label: "Transacionados", icon: HandCoins, color: "text-emerald-400 drop-shadow-lg" },
-  { value: "12 estados+DF", label: "Presença nacional", icon: Map, color: "text-yellow-400 drop-shadow-lg" },
-  { value: "3.007+", label: "Veículos geridos", icon: Car, color: "text-pink-400 drop-shadow-lg" },
+  { value: "R$ 100,1M", label: "Transacionados", icon: HandCoins, color: "text-emerald-400 drop-shadow-lg" },
+  { value: "20 estados+DF", label: "Presença nacional", icon: Map, color: "text-yellow-400 drop-shadow-lg" },
+  { value: "5.265+", label: "Veículos geridos", icon: Car, color: "text-pink-400 drop-shadow-lg" },
   { value: "40%", label: "Redução de custos", icon: Zap, color: "text-orange-400 drop-shadow-lg" },
 ]
 
@@ -146,7 +146,7 @@ export default function Hero() {
                 <div className="p-2 rounded-xl bg-[#025fc7]/10">
                   <Wrench className="w-6 h-6 text-[#025fc7]" />
                 </div>
-                <span className="font-medium text-gray-800">+761 Credenciadas</span>
+                <span className="font-medium text-gray-800">+843 Credenciadas</span>
               </div>
               <div className="flex items-center gap-3">
                 <div className="p-2 rounded-xl bg-[#0d97eb]/10">

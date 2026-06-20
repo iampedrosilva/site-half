@@ -79,7 +79,7 @@ export default function WorkshopTestimonials() {
             viewport={{ once: true }}
             className="label-tech mb-3"
           >
-            rede credenciada · +761 oficinas
+            rede credenciada · +843 oficinas
           </motion.p>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
